@@ -6,7 +6,7 @@ namespace AdapterPattern
     {
         private const int TargetVoltage = 120;
 
-        public bool SupplyPower(int volts)
+        public bool On(int volts)
         {
             if(volts > TargetVoltage)
                 throw new InvalidOperationException("Your device just exploded!");

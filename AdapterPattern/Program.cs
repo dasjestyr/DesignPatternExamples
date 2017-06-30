@@ -5,6 +5,19 @@ namespace AdapterPattern
 {
     internal class Program
     {
+        /********************* ADAPTER PATTERN ******************************
+         * In short, the adapter pattern is a way you can make one interface
+         * work with a different interface, without modifying either. This
+         * facilitates SRP, allowing you to work with various circumstances
+         * without contaminating your model. 
+         * 
+         * This example shows a scenario where you don't have the option to
+         * base class the outlet because you don't own the library in which
+         * it resides, simulating a scenario where you either don't have 
+         * access to the library source, or when modifying the source would
+         * complicate or contaminate the original model.
+         ********************************************************************/
+
         private static void Main(string[] args)
         {
             var koreanOutlet = new KoreanWallOutlet();

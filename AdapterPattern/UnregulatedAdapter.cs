@@ -2,6 +2,9 @@
 
 namespace AdapterPattern
 {
+    /// <summary>
+    /// This simply adapats the interface.
+    /// </summary>
     public class UnregulatedAdapter : KoreanPlug
     {
         private readonly AmericanPlug _americanPlug;
@@ -13,7 +16,8 @@ namespace AdapterPattern
 
         public override bool ApplyPower(int voltage)
         {
-            return _americanPlug.SupplyPower(voltage);
+            // this is where the interface is adapted "ApplyPower" becomes "On"
+            return _americanPlug.On(voltage);
         }
     }
 }
